@@ -1,0 +1,520 @@
+<header ng-include="'templates/header.html'"></header>
+
+	<div class="container marg60">
+		<div class="row">
+			<div id="custName">
+				<h2 class="inline"><b>HI&nbsp;<h2 class="inline" style="color:red;"><b>{{username}},</b></h2></b></h2><b>
+				</b><h2><b>WELCOME BACK!</b></h2>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="container">
+		<div class="col-md-12">
+			<div class="tab" style="margin-left: 18%;">
+			  <button class="tablinks" style="padding:0 10px;" onclick="openCity(event, 'Account')" id="defaultOpen"><b>Account Information</button>
+			  <button class="tablinks" style="padding:0 10px;" onclick="openCity(event, 'Manage')">Manage Address</button>
+			  <button class="tablinks" style="padding:0 10px;" onclick="openCity(event, 'Bank')">Bank Details</button>
+			  <button class="tablinks" style="padding:0 10px;" onclick="openCity(event, 'Fav')">Favorites</button>
+			  <button class="tablinks" style="padding:0 10px;" onclick="openCity(event, 'Orders')">Orders</b></button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Account Information-->
+		<div id="Account" class="font500 tabcontent">
+			<div class="container">
+			<form ng-submit="userInfo()" ng-model="inf">
+				<div style="margin-top:15px;">
+					<div class="col-md-4 col-md-offset-2" > 
+						<label  for="">FIRST NAME<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+						<input  type="password" class="box styling form-control" ng-model="fname" id="fname"  />
+					</div>			
+					<div class="col-md-4 " >
+						<label for="">LAST NAME<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+						<input  type="password" class="box styling form-control" ng-model="lname" id="lname" />
+					</div>
+				</div>
+				
+			
+				<div class="col-md-8 col-md-offset-2">
+					<div style="margin-top:15px;">
+						<div class="form-group" >    
+							<label for="">EMAIL ID <label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+							<input type="email" class="box styling form-control" placeholder="" ng-model="email" id="emal">    
+						</div>
+					</div>
+				</div>	
+				
+				<div class="col-md-8 col-md-offset-2">
+					<div style="margin-top:15px;">
+						<div class="form-group" >    
+							<label for="">ALTERNATE EMAIL ID<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+							<input type="email" class="box styling form-control" placeholder="" ng-model="alemail" id="alt">    
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-8 col-md-offset-2">
+					<div style="margin-top:15px;">
+						<div class="form-group" >    
+							<label for="">PASSWORD<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+							<input type="password" class="box styling form-control" placeholder="" ng-model="pwd" id="">    
+						</div>
+					</div>
+				</div>
+				
+				<div style="margin-top:15px;">
+					<div class="col-md-4 col-md-offset-2" > 
+						<label  for="">NEW PASSWORD<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+						<input  type="password" class="box styling form-control" ng-model="npwd" id=""  />
+					</div>			
+					<div class="col-md-4 " >
+						<label for="">CONFIRM PASSWORD<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+						<input  type="password" class="box styling form-control" ng-model="conpass" id="" />
+					</div>
+				</div>
+				
+				<div class="col-md-8 col-md-offset-2" > 
+					<div style="margin-top:15px;">
+						<label  for="">PHONE NUMBER<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+						<input type="pass" class="box styling form-control" ng-model="mob" id="mob"  />
+					</div>
+				</div>
+				
+				<div class="col-md-8 col-md-offset-2" > 
+					<div style="margin-top:15px;">
+						<label for="">COUNTRY<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+						<input type="pass" class="box styling form-control" ng-model="country" id="cont"  />
+					</div>
+				</div>
+					
+				<div class="col-md-12 " style="text-align: -webkit-center;">
+					<div style="margin-top:35px;">
+					<button class="block" style="width:20%;">SAVE CHANGES</button>	
+					</div>
+				</div>
+				<p class="text-danger" style="margin-left: 35%;">{{successMessage}}</p>
+			</form>
+			</div>
+		</div>
+<!-- Account Information - End -->
+
+<!-- Manage Address Start-->
+		<div id="Manage" class="tabcontent">
+			<div class="container font500">
+				
+				<div style="margin-top:15px;">
+					<div class="col-md-4 col-md-offset-2" > 
+						<label  for="">FIRST NAME</label>    
+						<input  type="text" class="box styling form-control " id=""  />
+					</div>			
+					<div class="col-md-4 " >
+						<label for="">LAST NAME</label>    
+						<input  type="text" class="box styling form-control " id="" />
+					</div>
+				</div>
+			
+				<div class="col-md-8 col-md-offset-2">
+					<div style="margin-top:15px;">
+						<div class="form-group" >    
+							<label for="">ADDRESS<label style="margin-left: 10px;">(line 1)</label></label>    
+							<input type="email" class="box styling form-control " placeholder="" id="">    
+						</div>
+					</div>
+				</div>	
+				
+				<div class="col-md-8 col-md-offset-2">
+					<div style="margin-top:15px;">
+						<div class="form-group" >    
+							<label for="">ADDRESS<label style="margin-left: 10px;">(line 2)</label></label>    
+							<input type="email" class="box styling form-control " placeholder="" id="">    
+						</div>
+					</div>
+				</div>
+				
+				<div style="margin-top:15px;">
+					<div class="col-md-4 col-md-offset-2" > 
+						<label  for="">CITY</label>    
+						<input  type="text" class="box styling form-control " id=""  />
+					</div>			
+					<div class="col-md-4 " >
+						<label for="">STATE</label>    
+						<input  type="text" class="box styling form-control " id="" />
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-md-offset-2" > 
+					<div style="margin-top:15px;">
+						<label  for="">PHONE NUMBER</label>    
+						<input  type="text" class="box styling form-control " id=""  />
+					</div>	
+				</div>			
+				<div class="col-md-4 " >
+					<div style="margin-top:15px;">
+						<label for="">POSTAL CODE</label>    
+						<input  type="text" class="box styling form-control " id="" />
+					</div>
+				</div>
+
+				<div class="col-md-12 " style="text-align: -webkit-center;">
+					<div style="margin-top:35px;">
+					<button class="block" style="width:20%;">ADD NEW ADDRESS</button>	
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- Account Information - End -->
+
+<!-- Bank Details Start-->
+		<div id="Bank" class="tabcontent">
+			<div class="container font500">
+				
+				<div class="col-md-12">					
+					<div class="col-md-4 col-md-offset-2 margB">
+						<label for="">ACCOUNT HOLDER NAME<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+						<input  type="text" class="box styling form-control" id="" />
+					</div>												
+					<div class=" col-md-4 margB">
+						<label  for="">ACCOUNT NUMBER<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+						<input  type="text" class="box styling form-control" id=""  />
+					</div>
+				</div>
+
+				<div class="col-md-12 margB" >
+					<div class="margTop15">
+						<div class="col-md-4 col-md-offset-2 " >					
+							<label  for="">BANK NAME<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+							<input  type="text" class="box styling form-control" id="" />
+						</div>
+						<div class="col-md-4 "> 				
+							<label for="">IFSC CODE<label style="color:red;margin-left: 10px;"><button class="edit">(EDIT)</button></label></label>    
+							<input type="text" class="box styling form-control" id=""  />
+						</div>
+					</div>
+				</div>	
+					<div class="col-md-12 margBot60">
+						<div class="col-md-4 col-md-offset-2 margB margTop15">
+							<label for="">ACCOUNT TYPE</label>    
+							<button class="block"style="padding:10px 20%; text-align:center;  width:100%;">CURRENT</button>
+						</div>
+						<div class="col-md-4 margTop15">
+							<label for=""> </label>  
+							<button class="block" style="padding:10px 20%;text-align:center;  width:100%;">SAVINGS</button>
+						</div>
+					</div>	
+				</div>
+				
+			</div>
+		</div>
+<!-- Bank Details - End -->
+
+<!-- Bank Details Start-->
+		<div id="Fav" class="tabcontent">
+				<div class="container">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<div class="row clr7">
+							<div class="col-md-2">
+								<h5>PRODUCTS</h5>
+							</div>
+							<div class="col-md-2">
+								<div class="row">
+									<h5 class="pull-left">DESCRIPTION</h5>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<h5>COLOR</h5>
+							</div>
+							
+							<div class="col-md-1">
+								<h5>QTY</h5>
+							</div>
+							<div class="col-md-1">
+								<h5>AMOUNT</h5>
+							</div>
+							<div class="col-md-2">
+								<h5>ADD TO CART</h5>
+							</div>
+							<div class="col-md-2">
+								<h5>DELETE</h5>
+							</div>
+							<hr style="width:100%;">
+						</div>
+						
+						
+						<div class="row margn">
+							<div class="col-md-2">
+								<img class="squareBox inline" src="">	
+							</div>
+							<div class="col-md-2">
+								<div class="row">
+									<h5 class="inline  pull-left">ZEN MAGNETS PACK<br><b style="font-weight:500;float:left;">Ref. 2514/302</b></h5>
+								</div>
+							</div>
+							<div class="col-md-2 inline">
+								<h5>One Color</h5>				
+							</div>
+							
+							<div class="col-md-1">
+								<h5>1</h5>
+							</div>
+							<div class="col-md-1">
+									<h5>900/-</h5>
+							</div>
+							<div class="col-md-2">
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+							</div>
+							<div class="col-md-2">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+						<hr style="width:100%;">
+				
+						<!--2nd-->
+						<div class="row margn">
+							<div class="col-md-2">
+								<img class="squareBox inline" src="">	
+							</div>
+							<div class="col-md-2">
+								<div class="row">
+									<h5 class="inline  pull-left">ZEN CAMERA<br><b style="font-weight:500;float:left;">Ref. 8246/402</b></h5>
+								</div>
+							</div>
+							<div class="col-md-2 inline">
+								<h5>One Color</h5>				
+							</div>
+							
+							<div class="col-md-1">
+								<h5>1</h5>
+							</div>
+							<div class="col-md-1">
+								<h5>1500/-</h5>
+							</div>
+							<div class="col-md-2">
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+							</div>
+							<div class="col-md-2">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+						<hr style="width:100%;">
+						
+						<!--3rd-->
+						<div class="row margn">
+							<div class="col-md-2">
+								<img class="squareBox inline" src="">	
+							</div>
+							<div class="col-md-2">
+								<div class="row">
+									<h5 class="inline  pull-left">COMPUTER PARTS<br><b style="font-weight:500;float:left;">Ref. 3549/679</b></h5>
+								</div>
+							</div>
+							<div class="col-md-2 inline">
+								<h5>Black</h5>				
+							</div>
+							
+							<div class="col-md-1 ">
+								<h5>2</h5>
+							</div>
+							<div class="col-md-1">
+								<h5>4000/-</h5>
+							</div>
+							<div class="col-md-2">
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+							</div>
+							<div class="col-md-2">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+								
+						<!--subtotalBar-->
+						<div class="row margn tBar">
+							<div class="col-md-2">
+									
+							</div>
+							<div class="col-md-2">
+								<div class="row">
+								
+								</div>
+							</div>
+							<div class="col-md-2 inline">
+											
+							</div>
+							
+							<div class="col-md-1 ">
+								<h5>Subtotal</h5>
+							</div>
+							<div class="col-md-1">
+								<h5>6400/-</h5>
+							</div>
+							<div class="col-md-2">
+								
+							</div>
+							<div class="col-md-2">
+								
+							</div>
+						</div>
+						<!--subtotalBar End-->
+						
+					</div>
+				</div>				
+			</div>
+		</div>
+<!-- Bank Details - End -->
+
+<!-- Bank Details Start-->
+		<div id="Orders" class="tabcontent">
+			<div class="container">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row clr7">
+						<div class="col-md-1">
+							<h5>ORDER NO</h5>
+						</div>
+						<div class="col-md-2">
+							<h5>ORDER DATE</h5>
+						</div>
+						<div class="col-md-4">
+							<h5>PRODUCTS</h5>
+						</div>
+						
+						<div class="col-md-1 col-md-offset-1">
+							<h5>STATUS</h5>
+						</div>
+						<div class="col-md-2">
+							<h5>SHIP DATE</h5>
+						</div>
+						<div class="col-md-1">
+							<h5>TOTAL AMOUNT</h5>
+						</div>
+						<hr style="width:100%;">
+					</div>
+					
+					<div class="row margn">
+						<div class="col-md-1">
+							<h5>#28365</h5>
+						</div>
+						<div class="col-md-2">
+							<h5>21/05/2017</h5>
+						</div>
+						<div class="col-md-4 inline">							
+							<img class="squareBox inline" src="">
+							<h5 class="inline">ZEN MAGNETS PACK<br><b style="font-weight:500;">Ref. 2514/302</b></h5>					
+						</div>
+						
+						<div class="col-md-1 col-md-offset-1">
+							<h5>OPEN</h5>
+						</div>
+						<div class="col-md-2">
+							<h5>22/05/2017</h5>
+						</div>
+						<div class="col-md-1	">
+							<h5>14,000/-</h5>
+						</div>
+					</div>
+					
+					<div class="row margn">
+						<div class="col-md-1">
+							<h5></h5>
+						</div>
+						<div class="col-md-2">
+							<h5></h5>
+						</div>
+						<div class="col-md-4 inline">
+							<img class="squareBox inline" src="">
+							<h5 class="inline">TELESCOPE<br><b style="font-weight:500;">Ref. 8246/044</b></h5>					
+						</div>
+						
+						<div class="col-md-1 col-md-offset-1">
+							<h5>OPEN</h5>
+						</div>
+						<div class="col-md-2">
+							<h5></h5>
+						</div>
+						<div class="col-md-1">
+							<h5></h5>
+						</div>
+					</div>
+					<hr style="width:100%;">
+					
+					<!--2nd-->
+					<div class="row margn">
+						<div class="col-md-1">
+							<h5>#28365</h5>
+						</div>
+						<div class="col-md-2">
+							<h5>11/05/2017</h5>
+						</div>
+						<div class="col-md-4 inline">
+							<img class="squareBox inline" src="">
+							<h5 class="inline">FARMING KIT<br><b style="font-weight:500;">Ref. 7546/890</b></h5>					
+						</div>
+						
+						<div class="col-md-1 col-md-offset-1">
+							<h5>PAID</h5>
+						</div>
+						<div class="col-md-2">
+							<h5>13/05/2017</h5>
+						</div>
+						<div class="col-md-1">
+							<h5>8,000/-</h5>
+						</div>
+					</div>
+					<hr style="width:100%;">
+					
+					<!--3rd-->
+					<div class="row margn">
+						<div class="col-md-1">
+							<h5>#28345</h5>
+						</div>
+						<div class="col-md-2">
+							<h5>01/05/2017</h5>
+						</div>
+						<div class="col-md-4 inline">
+							<img class="squareBox inline" src="">
+							<h5 class="inline">CHARGER KITS<br><b style="font-weight:500;">Ref. 7556/990</b></h5>					
+						</div>
+						
+						<div class="col-md-1 col-md-offset-1">
+							<h5 style="color:red;">FAILED</h5>
+						</div>
+						<div class="col-md-2">
+							<h5>15/05/2017</h5>
+						</div>
+						<div class="col-md-1">
+							<h5>1,000/-</h5>
+						</div>
+					</div>
+					<hr style="width:100%;">
+
+				</div>
+				
+			</div>
+		</div>
+<!-- Bank Details - End -->
+
+		
+<!--Tab Jquery-->
+		<script>
+			function openCity(evt, cityName) {
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+<!--Tab Jquery End-->		
+		
+
+<footer class="site-main-header" ng-include="'templates/footer.html'"></footer>

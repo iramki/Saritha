@@ -1,0 +1,206 @@
+
+/* CSS of Header of Sarita */
+
+/* Header Img*/
+
+.intro1{
+	margin-top:20px;
+	background-color:#C13639; 
+	color:#fff;
+	text-align:center;
+	margin-left: 15px;
+	padding-left: 0;
+    padding-right: 25px;
+}
+
+.intro2{ 
+	color:#0089AD;
+	text-align:center;
+	margin-left: 15px;
+	padding-left: 0;
+    padding-right: 25px;
+}
+
+.borderBot{
+	border-bottom:3px solid #C13639;
+	margin-left: 2px; 
+	margin-top: 10px; 
+	width: 220px;
+}
+
+.intro3{ 
+	color:#0089AD;
+}
+
+/*Header Ends */
+
+/* Landing Page Start*/
+
+.headCenter{
+	text-align:center;
+	color:#C13639;
+	font-weight:bold;
+}
+
+h4:hover{
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.subHeadCenter{
+	color:	#2F8AA4;
+	text-align:center;
+}
+
+.sarithaBlue{
+	color:#2F8AA4;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-item + .flex-item {
+  margin-left: 50px;
+}
+
+.button1 {
+  margin-top: 15px;
+  background-color: #fff;
+  border: 2px solid #2F8AA4;
+  border-radius:10px;
+  color: #2F8AA4;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button2 {
+  margin-top: 15px;
+  background-color: #2F8AA4;
+  border: 2px solid #2F8AA4 ;
+  border-radius:10px;
+  color: #fff;
+  padding: 10px 55px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.latestNewsContent{
+	font-size:19px;
+	color:#C13639;
+	font-weight:bold;
+	text-align: -webkit-center;
+}
+
+.headCenter1{
+	text-align:center;
+	color:#C13639;
+	font-size:19px;
+}
+
+.book{
+	background-image: url("imgs/bookAnAppointment.PNG");
+	background-size:cover;
+}
+
+.button3 {
+  margin-top: 15px;
+  background-color: #fff;
+  border: 2px solid #2F8AA4;
+  border-radius:10px;
+  color: #2F8AA4;
+  padding: 7px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*End of Home Page */
+
+/* Start of Footer */
+.ourBranches{
+	text-decoration:underline;
+	color:#fff;
+	font-size:25px;
+}
+
+.address{
+	color:#fff;
+	font-size:22px;
+}
+/* End of Footer*/
+
+/* Start of Dental Vaccation Page*/
+.dentalVacPara{
+	margin-top:40px;
+	font-weight: 800; 
+	font-size: 18px; 
+	text-align: justify;
+	padding-left: 50px;
+    padding-right: 50px;
+}
+
+.implantsHead{
+	color: #C13639;
+	font-weight:700;
+	float:left;
+	margin-left: 10px;
+	font-size: 22px;
+}
+
+.implantsButton{
+	border: none;
+    background-color: #C13639;
+    color: #fff;
+    border-radius: 6px;
+    margin-left: 57px;
+	box-shadow: 0px 0px 5px 5px #d1cdcd;
+}
+/*End of Dental Vaccation Page */
+
+/*Start of ABOUT US */
+
+.aboutUsPara{
+	margin-top: 10px;
+	font-weight: 700; 
+	font-size: 22px; 
+	text-align: justify;
+}
+.aboutUsPoints{
+	font-size:22px;
+	font-weight:700;
+	
+}
+/*End of ABOUT US */
+
+
+/* CONTACT US YASH start*/
+.contactUs{
+	font-size: 40px;
+	color: #dc0909;
+}
+.fnt{
+	font-size: 20px;
+}
+
+.submitButton{
+	margin-left: 45%;padding: 0 40px 0px 40px; margin-top: 50px; background-color:#2F8AA4;color:#fff;font-size: 20px;border: none;
+    border-radius: 6px;
+}
+
+.boxBorderColor{
+	/*border-color:#2F8AA4;
+	box-shadow:none; */
+}
+	
+/* CONTACT US YASH end*/
